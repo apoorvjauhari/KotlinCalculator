@@ -48,11 +48,48 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_weight="2"
-        android:weightSum="4"
+        android:weightSum="5"
         android:layout_margin="2dp"
 
         android:orientation="vertical">
 
+        <LinearLayout
+            android:id="@+id/extra"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <Button
+                android:id="@+id/zero"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_margin="2dp"
+                android:textColor="@color/neongreen"
+                android:background="@color/darkred"
+                android:textSize="20dp"
+                android:layout_gravity="right"
+                android:text="0" />
+
+
+
+
+
+            <Button
+                android:id="@+id/clearscreen"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="left"
+                android:textColor="@color/neongreen"
+                android:background="@color/darkred"
+
+                android:layout_weight="1"
+                android:layout_margin="2dp"
+                android:textSize="20dp"
+                android:text="AC" />
+        </LinearLayout>
         <LinearLayout
             android:id="@+id/ll1"
             android:layout_width="match_parent"
@@ -73,7 +110,7 @@
                 android:text="C" />
 
             <Button
-                android:id="@+id/zero"
+                android:id="@+id/dot"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
 
@@ -83,7 +120,7 @@
 
                 android:layout_margin="2dp"
                 android:textSize="20dp"
-                android:text="0" />
+                android:text="." />
 
             <Button
                 android:id="@+id/equals"

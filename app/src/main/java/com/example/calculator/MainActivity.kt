@@ -14,15 +14,23 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        val clear:Button = findViewById(R.id.clear)
+
        // val output:TextView = findViewById(R.id.solution)
        // val input:TextView = findViewById(R.id.query)
-
+        val clearscreen:Button = findViewById(R.id.clearscreen)
+        clearscreen.setOnClickListener{
+            input.text = ""
+            output.text = ""
+        }
+            val clear:Button = findViewById(R.id.clear)
        clear.setOnClickListener {
             val removedLast = input.text.toString().dropLast(1)
             input.text = removedLast
         }
-
+        val dot:Button = findViewById(R.id.dot)
+        dot.setOnClickListener {
+            input.text = addToInputText(".")
+        }
 
         val one:Button = findViewById(R.id.one)
         one.setOnClickListener {
